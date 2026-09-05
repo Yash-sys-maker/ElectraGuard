@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": {
+  "background": "#f8fafc",
+  "surface": "#ffffff",
+  "surface-dim": "#f1f5f9",
+  "surface-bright": "#ffffff",
+  "surface-container-lowest": "#ffffff",
+  "surface-container-low": "#f8fafc",
+  "surface-container": "#f1f5f9",
+  "surface-container-high": "#e2e8f0",
+  "surface-container-highest": "#cbd5e1",
+  "surface-variant": "#e2e8f0",
+  "surface-tint": "#2563eb",
+  "inverse-surface": "#0f172a",
+  "inverse-on-surface": "#ffffff",
+  "on-surface": "#0f172a",
+  "on-surface-variant": "#334155",
+  "on-background": "#0f172a",
+  "outline": "#475569",
+  "outline-variant": "#64748b",
+  "primary": "#2563eb",
+  "on-primary": "#ffffff",
+  "primary-container": "#eff6ff",
+  "on-primary-container": "#1e40af",
+  "primary-fixed": "#dbeafe",
+  "primary-fixed-dim": "#bfdbfe",
+  "on-primary-fixed": "#1e3a8a",
+  "on-primary-fixed-variant": "#1d4ed8",
+  "inverse-primary": "#60a5fa",
+  "secondary": "#059669",
+  "on-secondary": "#ffffff",
+  "secondary-container": "#ecfdf5",
+  "on-secondary-container": "#065f46",
+  "secondary-fixed": "#a7f3d0",
+  "secondary-fixed-dim": "#6ee7b7",
+  "on-secondary-fixed": "#022c22",
+  "on-secondary-fixed-variant": "#047857",
+  "error": "#dc2626",
+  "on-error": "#ffffff",
+  "error-container": "#fef2f2",
+  "on-error-container": "#991b1b",
+  "tertiary": "#0284c7",
+  "on-tertiary": "#ffffff",
+  "tertiary-container": "#f0f9ff",
+  "on-tertiary-container": "#075985",
+  "tertiary-fixed": "#bae6fd",
+  "tertiary-fixed-dim": "#7dd3fc",
+  "on-tertiary-fixed": "#082f49",
+  "on-tertiary-fixed-variant": "#0369a1"
+}, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-8": "0.5rem", "sidebar-width": "20rem", "panel-gutter": "0.75rem", "space-2": "0.125rem", "space-32": "2rem", "space-6": "0.375rem", "space-4": "0.25rem", "space-12": "0.75rem", "space-20": "1.25rem", "space-24": "1.5rem", "inspector-width": "24rem", "space-16": "1rem" }, "fontFamily": {
+  "headline-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "display-lg-mobile": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "data-mono-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "headline-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "label-caps": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-md": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "display-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "data-mono-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"]
+}, "fontSize": { "display-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-caps": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" } ], "data-mono-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-mono-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "display-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ] } } } };</script><link rel="stylesheet" href="assets/css/tactical-theme.css"/>
+</head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-white border-r border-slate-200 z-50 flex flex-col justify-between select-none shadow-xs">
+  <div class="flex flex-col">
+    <!-- Brand Header -->
+    <div class="h-16 px-4 border-b border-slate-200 flex items-center gap-3 bg-white shrink-0">
+      <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-xs shrink-0">
+        <span class="material-symbols-outlined text-[18px]">how_to_vote</span>
+      </div>
+      <div class="flex flex-col min-w-0">
+        <span class="text-sm font-semibold text-slate-900 tracking-tight leading-tight truncate">ElectraGuard</span>
+        <span class="text-[11px] text-slate-500 font-normal leading-tight truncate">Election Intelligence</span>
+      </div>
+    </div>
+
+    <!-- Navigation List -->
+    <div class="px-3 py-4">
+      <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2">Operations</div>
+      <nav class="flex flex-col gap-0.5">
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="overview" href="index.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">dashboard</span>
+            <span class="truncate">Overview</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="live-incidents" href="live-incidents.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">emergency</span>
+            <span class="truncate">Live Incidents</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-semibold shrink-0">32</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="tactical-map" href="tactical-map.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">map</span>
+            <span class="truncate">Tactical Map</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="priority-alerts" href="priority-alerts.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">notification_important</span>
+            <span class="truncate">Priority Alerts</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold shrink-0">24</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="verification-queue" href="verification-queue.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">fact_check</span>
+            <span class="truncate">Verification Queue</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold shrink-0">146</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors bg-blue-50 text-blue-700 font-semibold active" data-path="rapid-response" href="rapid-response.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">local_shipping</span>
+            <span class="truncate">Rapid Response</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="analytics-reports" href="analytics.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">insights</span>
+            <span class="truncate">Analytics & Reports</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="citizen-portal" href="citizen-portal.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">stay_current_portrait</span>
+            <span class="truncate">Citizen Portal</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- User Profile Section -->
+  <div class="p-3 border-t border-slate-200 bg-slate-50/70 shrink-0">
+    <div class="flex items-center gap-3 px-2 py-1.5">
+      <div class="w-8 h-8 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center font-medium text-xs text-slate-700 shrink-0">
+        YS
+      </div>
+      <div class="flex flex-col min-w-0 flex-1">
+        <span class="text-xs font-semibold text-slate-800 truncate leading-tight">Yash Singh</span>
+        <span class="text-[11px] text-slate-500 truncate leading-tight mt-0.5">Senior Election Monitor</span>
+      </div>
+      <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0" title="Online & Synced"></span>
+    </div>
+  </div>
+</aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-white/95 backdrop-blur border-b border-slate-200 z-40 px-6 flex items-center justify-between gap-4">
+  <div class="flex items-center gap-3 min-w-0">
+    <h1 class="text-sm font-semibold text-slate-900 tracking-tight truncate">Rapid Response Dispatch Command</h1>
+    <span class="text-slate-300 hidden sm:inline">•</span>
+    <span class="text-xs text-slate-500 hidden sm:inline">2025 General Election Cycle</span>
+  </div>
+
+  <div class="flex-1 max-w-md mx-auto hidden md:block">
+    <div class="relative flex items-center">
+      <span class="material-symbols-outlined absolute left-3 text-slate-400 text-[18px]">search</span>
+      <input class="w-full bg-slate-50 border border-slate-200 rounded-md pl-9 pr-3 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 transition-colors" placeholder="Search incident ID, polling station, district..." type="text"/>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>Live Ingest</span>
+    </div>
+
+    <span class="text-xs text-slate-500 font-medium telemetry-utc-clock hidden lg:inline">16:30:14 UTC</span>
+
+    <button aria-label="Notifications" class="relative p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-md transition-colors" type="button">
+      <span class="material-symbols-outlined text-[20px]">notifications</span>
+      <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500"></span>
+    </button>
+
+    <button class="h-8 px-3.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md flex items-center gap-1.5 shadow-xs transition-colors" type="button">
+      <span class="material-symbols-outlined text-[16px]">add</span>
+      <span>Report Incident</span>
+    </button>
+  </div>
+</header><main class="relative pt-16 min-h-screen bg-background"><div class="flex flex-col w-full p-space-20 gap-space-20 max-w-[1720px] mx-auto">
+<!-- Mission Command Header -->
+<div class="bg-white border-b border-slate-200 p-5 rounded-lg shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2">
+      <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Rapid Response Active</span>
+      <span class="text-xs text-slate-500 font-medium">• Sector 04-NW</span>
+    </div>
+    <h1 class="text-lg font-bold text-slate-900 tracking-tight">Rapid Response Dispatch Console</h1>
+    <p class="text-xs text-slate-500">Dispatch mobile observer units and technical teams to resolved incident hotspots</p>
+  </div>
+  <div class="flex items-center gap-3">
+    <div class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-md text-right">
+      <div class="text-[11px] text-slate-500">Target Incident</div>
+      <div class="text-xs font-semibold text-slate-900">#EG-10482 (Polling Station #142)</div>
+    </div>
+  </div>
+</div>
+<!-- Main Multi-Column Interactive Workspace -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-20 items-start">
+<!-- LEFT PANEL: Unit Selection & Telemetry (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-16">
+<!-- Section Header -->
+<div class="flex items-center justify-between px-space-4">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">1. Field Units &amp; Proximity Telemetry</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">3 ASSETS IN PROXIMITY</span>
+</div>
+<!-- Unit Alpha-4 (Recommended & Selected) -->
+<div class="bg-surface-container rounded-xl p-space-16 transition-all duration-150 cursor-pointer shadow-md bg-gradient-to-br from-surface-container via-surface-container to-surface-container-high relative overflow-hidden" id="unit-card-alpha">
+<div class="absolute top-0 right-0 bg-primary text-on-primary font-label-caps text-label-caps px-space-8 py-space-2 rounded-bl uppercase font-bold tracking-wider">
+          RECOMMENDED PRIMARY VECTOR
+        </div>
+<div class="flex items-start justify-between gap-space-12">
+<div class="flex items-center gap-space-12">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">radar</span>
+</div>
+<div>
+<div class="flex items-center gap-space-8">
+<span class="font-headline-lg text-headline-lg text-on-surface">UNIT ALPHA-4</span>
+<span class="px-space-6 py-space-2 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps">READY / VECTORABLE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High-Mobility Observer Rover // Mobile Support Fleet</p>
+</div>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-8 my-space-12 bg-surface-container-lowest/80 p-space-12 rounded-lg">
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">DISTANCE</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">1.2 <span class="text-xs text-on-surface-variant font-normal">km</span></div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">ESTIMATED ETA</div>
+<div class="font-headline-sm text-headline-sm text-primary">3m 40s</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">FUEL / RANGE</div>
+<div class="font-headline-sm text-headline-sm text-secondary">94% <span class="text-xs text-on-surface-variant font-normal">(320km)</span></div>
+</div>
+</div>
+<!-- Unit Details -->
+<div class="space-y-space-8 text-body-sm font-body-sm">
+<div class="flex items-start gap-space-8">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0 mt-0.5">group</span>
+<div>
+<span class="text-on-surface-variant">Crew Manifest:</span>
+<span class="text-on-surface font-medium"> 2 Accredited Senior Observers + 1 Tech Hardware Specialist (EVM Core)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-8">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0 mt-0.5">pin_drop</span>
+<div class="font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface-variant">Coords:</span>
+<span class="text-on-surface"> 28.6105° N, 77.2045° E (Sector 4B Depot)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-8">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">cell_tower</span>
+<div class="font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface-variant">Encrypted Comms:</span>
+<span class="text-secondary font-semibold"> Secure UHF Ch-04 (AES-256 Synchronized)</span>
+</div>
+</div>
+</div>
+<!-- Equipment Payload Badges -->
+<div class="mt-space-12 pt-space-12 bg-surface-container-low/50 -mx-space-16 -mb-space-16 p-space-12 rounded-b-xl flex flex-wrap gap-space-6">
+<span class="px-space-6 py-space-2 rounded bg-surface-container-high text-on-surface font-data-mono-sm text-[10px] uppercase">
+            ✓ Tamper-Evident Seals
+          </span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-high text-on-surface font-data-mono-sm text-[10px] uppercase">
+            ✓ Backup EVM Battery Packs (x4)
+          </span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-high text-on-surface font-data-mono-sm text-[10px] uppercase">
+            ✓ 4K Bodycam Real-Time Feed
+          </span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-high text-on-surface font-data-mono-sm text-[10px] uppercase">
+            ✓ Mil-Spec Satellite Uplink
+          </span>
+</div>
+</div>
+<!-- Unit Bravo-3 (Standby) -->
+<div class="bg-surface-container-low rounded-xl p-space-16 hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-12">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div>
+<div class="flex items-center gap-space-8">
+<span class="font-headline-sm text-headline-sm text-on-surface">UNIT BRAVO-3</span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps">ON-SCENE (#91)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tactical Security Escort Van // 4 Monitors</p>
+</div>
+</div>
+<div class="text-right">
+<div class="font-data-mono-lg text-data-mono-lg text-on-surface">4.8 km</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">ETA: 14 MIN</div>
+</div>
+</div>
+<p class="mt-space-8 text-body-sm font-body-sm text-outline">Currently securing ballot box transfer at Central Ward Station #91. Retasking would require RO override.</p>
+</div>
+<!-- Unit Tech-Crew-2 (Hardware Only) -->
+<div class="bg-surface-container-low rounded-xl p-space-16 hover:bg-surface-container transition-colors cursor-pointer shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-12">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">build_circle</span>
+</div>
+<div>
+<div class="flex items-center gap-space-8">
+<span class="font-headline-sm text-headline-sm text-on-surface">TECH-CREW-2</span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps">STANDBY // HARDWARE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Electronic Voting Machine Rapid Diagnostic Team</p>
+</div>
+</div>
+<div class="text-right">
+<div class="font-data-mono-lg text-data-mono-lg text-on-surface">3.1 km</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">ETA: 7 MIN</div>
+</div>
+</div>
+<p class="mt-space-8 text-body-sm font-body-sm text-outline">Specialized for cryptographic verification &amp; hardware malfunctions. Minimal civilian de-escalation training.</p>
+</div>
+<!-- Observer Unit Status Matrix -->
+<div class="bg-surface-container-lowest p-space-12 rounded-xl">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant mb-space-8">
+<span>FIELD FORCE READINESS (ZONE 4)</span>
+<span class="text-secondary font-bold">88.4% CAPACITY</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 65%;"></div>
+<div class="bg-primary h-full" style="width: 23.4%;"></div>
+<div class="bg-error h-full" style="width: 11.6%;"></div>
+</div>
+<div class="flex justify-between font-data-mono-sm text-[10px] text-on-surface-variant mt-space-4">
+<span>Active On-Mission (9)</span>
+<span>In-Transit (3)</span>
+<span>Stationary / Maintenance (2)</span>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Geospatial Vectoring & Tactical Directives (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-20">
+<!-- Section 3: Real-Time Vectoring Mini-Map & Telemetry -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg flex flex-col">
+<div class="p-space-12 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-primary text-[20px]">explore</span>
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">Live Intercept Trajectory &amp; Spatial Vector</span>
+</div>
+<div class="flex items-center gap-space-8 font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>SAT-TELEMETRY 120 FPS</span>
+</div>
+</div>
+<div class="relative w-full h-[320px] bg-surface-container-lowest overflow-hidden">
+<!-- Static Map Base layer with custom tactical styling -->
+<div class="w-full h-full bg-cover bg-center opacity-40 filter saturate-50 contrast-125" data-location="Connaught Place, New Delhi, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsz9VOMJcFZUq5T6Mb1WwVQcgi8XDhZcqVXKBFID7AXG5hPyy-mtwlxi7ttCReHl_7v4U6jlN8qGea8Ipc3T6By-JUh-XU2b7IZefx0ULnED2UNxGW1mS-b4onx_9H5mahaFly-hLEDxUTAUPMd9sEZXXPhP9-6sGxmeSdaA6V231sucxUDyDv_ufeoEJFkLAbk_W7vd1PNfg4pAc5OsVjaiSeKvElDOuRPLoXhdqz_6JuU0NgnH-T')"></div>
+<!-- Tactical Overlay Canvas (Vectoring Path Visualizer) -->
+<div class="absolute inset-0 pointer-events-none p-space-16 flex flex-col justify-between">
+<!-- Map Top Floating telemetry widgets -->
+<div class="flex items-center justify-between">
+<div class="bg-surface-container-lowest/90 backdrop-blur px-space-12 py-space-6 rounded-lg font-data-mono-sm text-data-mono-sm shadow">
+<span class="text-on-surface-variant">VECTOR ROUTE: </span>
+<span class="text-primary font-semibold">Sector 4B Depot ➔ North Main Arterial ➔ Gate 2</span>
+</div>
+<div class="bg-surface-container-lowest/90 backdrop-blur px-space-12 py-space-6 rounded-lg font-data-mono-sm text-data-mono-sm text-secondary shadow flex items-center gap-space-6">
+<span class="material-symbols-outlined text-[16px]">traffic</span>
+<span>TRAFFIC: MINIMAL (TACTICAL CLEARANCE)</span>
+</div>
+</div>
+<!-- Visual Route overlay SVG -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="routeGrad" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.8"></stop>
+<stop offset="70%" stop-color="#f59e0b" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#ef4444" stop-opacity="0.9"></stop>
+</lineargradient>
+<pattern height="30" id="gridPattern" patternunits="userSpaceOnUse" width="30">
+<path d="M 30 0 L 0 0 0 30" fill="none" stroke="#cbd5e1" stroke-opacity="0.3" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#gridPattern)" height="100%" width="100%"></rect>
+<!-- Route Path -->
+<path class="animate-pulse" d="M 120 250 C 220 220, 310 180, 420 160 S 550 110, 680 70" fill="none" stroke="url(#routeGrad)" stroke-dasharray="6,4" stroke-linecap="round" stroke-width="4"></path>
+<!-- Unit Location marker (Origin / Current) -->
+<circle cx="120" cy="250" fill="#4edea3" r="8"></circle>
+<circle cx="120" cy="250" fill="#4edea3" fill-opacity="0.2" r="16"></circle>
+<!-- Target Polling Station Hotspot -->
+<circle cx="680" cy="70" fill="#ef4444" r="10"></circle>
+<circle class="animate-ping" cx="680" cy="70" fill="#ef4444" fill-opacity="0.25" r="22"></circle>
+</svg>
+<!-- Map Floating Markers -->
+<div class="absolute left-16 bottom-12 bg-surface-container-lowest/90 px-space-8 py-space-4 rounded font-data-mono-sm text-data-mono-sm text-secondary shadow">
+              [ALPHA-4] SPEED: 48 KM/H
+            </div>
+<div class="absolute right-16 top-10 bg-error-container/90 px-space-8 py-space-4 rounded font-data-mono-sm text-data-mono-sm text-on-error-container shadow font-semibold">
+              TARGET #142 (PERIMETER CONFLICT)
+            </div>
+<!-- Map Bottom Controls -->
+<div class="flex items-center justify-between">
+<div class="flex gap-space-6">
+<span class="px-space-8 py-space-2 rounded bg-surface-container-lowest text-on-surface font-label-caps text-label-caps">LAT: 28.6105</span>
+<span class="px-space-8 py-space-2 rounded bg-surface-container-lowest text-on-surface font-label-caps text-label-caps">LON: 77.2045</span>
+<span class="px-space-8 py-space-2 rounded bg-surface-container-lowest text-on-surface font-label-caps text-label-caps">ALT: 216m</span>
+</div>
+<div class="bg-surface-container-lowest/90 px-space-8 py-space-4 rounded text-on-surface-variant font-label-caps text-label-caps">
+                GEO-FENCE: STRICT PERIMETER
+              </div>
+</div>
+</div>
+</div>
+<!-- Telemetry Strip -->
+<div class="p-space-12 bg-surface-container-low grid grid-cols-2 md:grid-cols-4 gap-space-12">
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">INTERCEPT CORRIDOR</div>
+<div class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold">NORTH HIGHWAY ARTERIAL</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">CIVILIAN DENSITY</div>
+<div class="font-data-mono-sm text-data-mono-sm text-primary font-semibold">MODERATE (~450 VOTERS)</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">PERIMETER BREACH</div>
+<div class="font-data-mono-sm text-data-mono-sm text-error font-semibold">NORTH GATE 2 BLOCKED</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">ESCORT CORRIDOR STATUS</div>
+<div class="font-data-mono-sm text-data-mono-sm text-secondary font-semibold">GREEN // PRIORITY S-4</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Operational Directive & Mission Orders -->
+<div class="bg-surface-container-low rounded-xl p-space-20 shadow-md flex flex-col gap-space-16">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">2. Operational Directives &amp; Rules of Engagement (ROE)</span>
+</div>
+<span class="px-space-8 py-space-2 rounded bg-primary/10 text-primary font-label-caps text-label-caps">SEC-OP ORD #448-9</span>
+</div>
+<!-- Directive Specifications -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-16">
+<div class="bg-surface-container p-space-12 rounded-lg flex flex-col gap-space-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">PRIMARY MISSION DESIGNATION</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Civilian Access Restoration &amp; Voter Escort Oversight</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-4">
+              Clear bottleneck obstruction at North Ward Gate 2. Establish 100-meter protected civilian corridor allowing unimpeded voter ingress.
+            </p>
+</div>
+<div class="bg-surface-container p-space-12 rounded-lg flex flex-col gap-space-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">STATUTORY ROE PROTOCOL</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Strict Observer Neutrality &amp; De-escalation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-4">
+              Passive digital logging. Zero lethal deterrence. Coordinate on-site directly with the local Returning Officer (RO). Non-confrontational mediator role.
+            </p>
+</div>
+</div>
+<!-- Secure Radio / E2E Comms Bus -->
+<div class="bg-surface-container-lowest p-space-16 rounded-lg flex flex-col gap-space-12">
+<div class="flex items-center justify-between flex-wrap gap-space-8">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-secondary text-[20px]">radio</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold uppercase">Tactical Voice Bus: Secure UHF Ch-04 (Encrypted AES-256)</span>
+</div>
+<span class="px-space-6 py-space-2 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps">AUDIO BUS SYNCHRONIZED</span>
+</div>
+<!-- Radio Intercom Buttons -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-12">
+<button class="h-10 px-space-12 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-space-8 shadow-sm" id="btn-comms-alpha" onclick="toggleCommsAlpha()">
+<span class="material-symbols-outlined text-primary text-[18px]">headset_mic</span>
+<span id="comms-status-label">OPEN SECURE COMMS LINK // ALPHA-4</span>
+</button>
+<button class="h-10 px-space-12 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-space-8 shadow-sm" id="btn-police-patch" onclick="togglePolicePatch()">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_police</span>
+<span id="police-status-label">PATCH IN DISTRICT POLICE LIAISON</span>
+</button>
+</div>
+<!-- Live Audio Transcript Feed -->
+<div class="bg-surface-container p-space-8 rounded font-data-mono-sm text-[11px] text-on-surface-variant flex items-center gap-space-8">
+<span class="text-primary font-bold">[ALPHA-4 COMRAD]:</span>
+<span class="truncate">"Engines running at Sector 4B Depot. Awaiting official dispatch handshake to initiate route."</span>
+<span class="ml-auto text-outline-variant shrink-0">00:04 AGO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Action Bar / Authorization Dock -->
+<section class="bg-surface-container-lowest rounded-xl p-space-16 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-16 sticky bottom-space-16 z-30">
+<div class="flex items-center gap-space-16">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Target Ready for Immediate Intercept Vectoring</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Selected Asset: <span class="text-primary font-semibold">UNIT ALPHA-4</span> | Estimated Arrival: <span class="text-secondary font-semibold">3m 40s</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-12 flex-wrap w-full md:w-auto justify-end">
+<!-- Cancel Button -->
+<button class="h-11 px-space-16 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-body-sm font-semibold transition-colors" onclick="abortDispatchOrder()">
+        Abort Dispatch Order
+      </button>
+<!-- Green Secondary Authorization Button -->
+<button class="h-11 px-space-16 rounded-lg bg-secondary-container hover:bg-secondary-container/90 text-on-secondary-container font-headline-sm text-body-sm font-semibold transition-colors flex items-center gap-space-8 shadow" onclick="dispatchWithEscort()">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>DISPATCH WITH RETURNING OFFICER ESCORT</span>
+</button>
+<!-- Primary Orange/Amber Action Button -->
+<button class="h-11 px-space-24 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-body-sm font-bold tracking-wide transition-all duration-150 flex items-center gap-space-8 shadow-lg" id="btn-primary-dispatch" onclick="authorizeImmediateDispatch()">
+<span class="material-symbols-outlined text-[22px]">send</span>
+<span>AUTHORIZE IMMEDIATE RAPID DISPATCH (UNIT ALPHA-4)</span>
+</button>
+</div>
+</section>
+<!-- Interactive State Scripts -->
+<script>
+    let commsConnected = false;
+    let policePatched = false;
+
+    function toggleCommsAlpha() {
+      commsConnected = !commsConnected;
+      const label = document.getElementById('comms-status-label');
+      const btn = document.getElementById('btn-comms-alpha');
+      if (commsConnected) {
+        label.innerText = 'SECURE COMMS LIVE [CHANNEL 04]';
+        btn.classList.add('bg-secondary/20', 'text-secondary');
+      } else {
+        label.innerText = 'OPEN SECURE COMMS LINK // ALPHA-4';
+        btn.classList.remove('bg-secondary/20', 'text-secondary');
+      }
+    }
+
+    function togglePolicePatch() {
+      policePatched = !policePatched;
+      const label = document.getElementById('police-status-label');
+      const btn = document.getElementById('btn-police-patch');
+      if (policePatched) {
+        label.innerText = 'DISTRICT POLICE COMM LIAISON [ACTIVE]';
+        btn.classList.add('bg-primary/20', 'text-primary');
+      } else {
+        label.innerText = 'PATCH IN DISTRICT POLICE LIAISON';
+        btn.classList.remove('bg-primary/20', 'text-primary');
+      }
+    }
+
+    function authorizeImmediateDispatch() {
+      const btn = document.getElementById('btn-primary-dispatch');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[22px] animate-spin">sync</span><span>TRANSMITTING VECTOR CODES...</span>';
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+      
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[22px]">done_all</span><span>ALPHA-4 EN ROUTE (ETA 3M 35S)</span>';
+      }, 1200);
+    }
+
+    function dispatchWithEscort() {
+      alert('Directive Transmitted: Unit Alpha-4 synchronized with Chief Returning Officer field team.');
+    }
+
+    function abortDispatchOrder() {
+      if (confirm('Confirm cancellation of Defcon 2 rapid vector dispatch?')) {
+        history.back();
+      }
+    }
+  </script>
+</div></main></div>
+<script src="assets/js/telemetry.js"></script>
+<script src="assets/js/modal-certify.js"></script>
+<script src="assets/js/nav.js"></script>
+</body></html>

@@ -1,0 +1,414 @@
+/* Clean, High-Visibility, Human-Centered UI Theme for ElectraGuard */
+
+/* Universal Clean Typography - Standard, familiar, natural sans-serif */
+html, body, input, button, select, textarea, p, h1, h2, h3, h4, h5, h6, table, td, th, li, label, div, nav, header, aside, main, section {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Material Symbols Icons - GUARANTEED ICON RENDERING (Prevents ligature words from rendering as text) */
+.material-symbols-outlined, [class*="material-symbols"] {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 20px;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  direction: ltr !important;
+  -webkit-font-feature-settings: 'liga' !important;
+  -webkit-font-smoothing: antialiased !important;
+  flex-shrink: 0 !important;
+}
+
+/* High-Visibility Text Contrast Overrides */
+body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Strict Left Navigation Sidebar Styling - Clean, Compact, Professional, Zero Overlap */
+aside, aside.w-64 {
+  width: 16rem !important;
+  min-width: 16rem !important;
+  max-width: 16rem !important;
+  background-color: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+  z-index: 50 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+aside nav {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+aside nav a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 12px !important;
+  min-height: 38px !important;
+  border-radius: 6px !important;
+  color: #475569 !important;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease !important;
+  border: none !important;
+  margin: 0 !important;
+  background: transparent;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+aside nav a:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+aside nav a.active, aside nav a[data-active="true"] {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  font-weight: 600 !important;
+}
+
+aside nav a.active .material-symbols-outlined, aside nav a[data-active="true"] .material-symbols-outlined {
+  color: #2563eb !important;
+}
+
+aside nav a .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-size: 19px !important;
+  width: 20px !important;
+  min-width: 20px !important;
+  height: 20px !important;
+  line-height: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #64748b !important;
+  flex-shrink: 0 !important;
+}
+
+aside nav a .nav-label, aside nav a span:not(.material-symbols-outlined):not([class*="rounded-full"]) {
+  font-size: 13px !important;
+  font-weight: inherit !important;
+  line-height: 1.25rem !important;
+  color: inherit !important;
+  white-space: nowrap !important;
+}
+
+aside nav a .nav-badge, aside nav a span[class*="rounded-full"] {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  padding: 1px 7px !important;
+  border-radius: 9999px !important;
+  line-height: 16px !important;
+  height: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+}
+
+/* Ensure main content container offset matches sidebar strictly */
+aside ~ div {
+  padding-left: 16rem !important;
+}
+aside ~ div > header {
+  left: 16rem !important;
+}
+
+/* Clear, easily visible typography */
+h1, h2, h3, h4, h5, h6, .font-headline-lg, .font-headline-sm, .font-display-lg, .font-display-lg-mobile {
+  color: #0f172a !important;
+  letter-spacing: -0.015em !important;
+  font-weight: 600 !important;
+}
+
+p, span, td, th, li, label, .font-body-lg, .font-body-md, .font-body-sm {
+  color: #1e293b;
+  letter-spacing: normal !important;
+}
+
+/* Secondary telemetry & labels - Deep Slate 700 for guaranteed legibility */
+.text-on-surface-variant {
+  color: #334155 !important;
+}
+
+.text-outline {
+  color: #475569 !important;
+}
+
+.text-outline-variant {
+  color: #64748b !important;
+}
+
+/* Natural letter spacing for badges & tags */
+.font-label-caps, .font-data-mono-sm, .font-data-mono-lg {
+  letter-spacing: 0.01em !important;
+  font-feature-settings: normal !important;
+}
+
+/* Smooth, Calming Button System */
+button, .btn, a[role="button"] {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Primary Action Buttons - Calming Royal Blue */
+button.bg-primary, .bg-primary, button#submitReportBtn, button#btn-primary-dispatch, button#modal-submit-certify-btn {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #1d4ed8 !important;
+}
+
+button.bg-primary:hover, button#submitReportBtn:hover, button#btn-primary-dispatch:hover, button#modal-submit-certify-btn:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Calming Secondary Buttons */
+button.bg-surface-container, button.bg-surface-container-high {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+button.bg-surface-container:hover, button.bg-surface-container-high:hover {
+  background-color: #f8fafc !important;
+  color: #2563eb !important;
+  border-color: #93c5fd !important;
+}
+
+/* Calming Escalate Buttons - Refined Soft Crimson (Not screaming neon) */
+button.bg-error, .bg-error {
+  background-color: #e11d48 !important;
+  color: #ffffff !important;
+  border: 1px solid #be123c !important;
+}
+
+button.bg-error:hover {
+  background-color: #be123c !important;
+}
+
+/* Semantic Badges - Calming pastels with dark legible text */
+.bg-error-container {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+  border: 1px solid #fca5a5 !important;
+}
+
+.bg-primary-container {
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+  border: 1px solid #bfdbfe !important;
+}
+
+.bg-secondary-container, .bg-secondary\/10 {
+  background-color: #ecfdf5 !important;
+  color: #065f46 !important;
+  border: 1px solid #a7f3d0 !important;
+}
+
+/* Card Surfaces & Clean Borders */
+.bg-surface-container-lowest, aside, header {
+  background-color: #ffffff !important;
+}
+
+.bg-surface-container {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+.bg-surface-container-low {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.border-surface-container-highest {
+  border-color: #e2e8f0 !important;
+}
+
+/* Smooth Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Tactical Toast Notification */
+#tactical-toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.tactical-toast {
+  pointer-events: auto;
+  min-width: 320px;
+  max-width: 440px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #2563eb;
+  color: #0f172a;
+  padding: 0.85rem 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 13px;
+  animation: toast-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.2s ease;
+}
+
+.tactical-toast.toast-error {
+  border-left-color: #e11d48;
+}
+
+.tactical-toast.toast-success {
+  border-left-color: #059669;
+}
+
+.tactical-toast.toast-info {
+  border-left-color: #2563eb;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+}
+
+/* Modal Backdrop & Card */
+.tactical-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.tactical-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tactical-modal-card {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 10px;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.2);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.96);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tactical-modal-backdrop.active .tactical-modal-card {
+  transform: scale(1);
+}
+
+/* Clean Table Styling - Spacious, Legible, High-Contrast */
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+}
+
+th, td {
+  padding: 11px 16px !important;
+  font-size: 13px !important;
+  vertical-align: middle !important;
+  line-height: 1.35 !important;
+}
+
+th {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  white-space: nowrap !important;
+}
+
+td {
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+tr:hover td {
+  background-color: #f8fafc !important;
+}

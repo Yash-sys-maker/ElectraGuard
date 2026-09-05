@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": {
+  "background": "#f8fafc",
+  "surface": "#ffffff",
+  "surface-dim": "#f1f5f9",
+  "surface-bright": "#ffffff",
+  "surface-container-lowest": "#ffffff",
+  "surface-container-low": "#f8fafc",
+  "surface-container": "#f1f5f9",
+  "surface-container-high": "#e2e8f0",
+  "surface-container-highest": "#cbd5e1",
+  "surface-variant": "#e2e8f0",
+  "surface-tint": "#2563eb",
+  "inverse-surface": "#0f172a",
+  "inverse-on-surface": "#ffffff",
+  "on-surface": "#0f172a",
+  "on-surface-variant": "#334155",
+  "on-background": "#0f172a",
+  "outline": "#475569",
+  "outline-variant": "#64748b",
+  "primary": "#2563eb",
+  "on-primary": "#ffffff",
+  "primary-container": "#eff6ff",
+  "on-primary-container": "#1e40af",
+  "primary-fixed": "#dbeafe",
+  "primary-fixed-dim": "#bfdbfe",
+  "on-primary-fixed": "#1e3a8a",
+  "on-primary-fixed-variant": "#1d4ed8",
+  "inverse-primary": "#60a5fa",
+  "secondary": "#059669",
+  "on-secondary": "#ffffff",
+  "secondary-container": "#ecfdf5",
+  "on-secondary-container": "#065f46",
+  "secondary-fixed": "#a7f3d0",
+  "secondary-fixed-dim": "#6ee7b7",
+  "on-secondary-fixed": "#022c22",
+  "on-secondary-fixed-variant": "#047857",
+  "error": "#dc2626",
+  "on-error": "#ffffff",
+  "error-container": "#fef2f2",
+  "on-error-container": "#991b1b",
+  "tertiary": "#0284c7",
+  "on-tertiary": "#ffffff",
+  "tertiary-container": "#f0f9ff",
+  "on-tertiary-container": "#075985",
+  "tertiary-fixed": "#bae6fd",
+  "tertiary-fixed-dim": "#7dd3fc",
+  "on-tertiary-fixed": "#082f49",
+  "on-tertiary-fixed-variant": "#0369a1"
+}, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-8": "0.5rem", "sidebar-width": "20rem", "panel-gutter": "0.75rem", "space-2": "0.125rem", "space-32": "2rem", "space-6": "0.375rem", "space-4": "0.25rem", "space-12": "0.75rem", "space-20": "1.25rem", "space-24": "1.5rem", "inspector-width": "24rem", "space-16": "1rem" }, "fontFamily": {
+  "headline-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "display-lg-mobile": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "data-mono-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "headline-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "label-caps": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-md": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "display-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "data-mono-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"]
+}, "fontSize": { "display-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-caps": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" } ], "data-mono-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-mono-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "display-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ] } } } };</script><link rel="stylesheet" href="assets/css/tactical-theme.css"/>
+</head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-white border-r border-slate-200 z-50 flex flex-col justify-between select-none shadow-xs">
+  <div class="flex flex-col">
+    <!-- Brand Header -->
+    <div class="h-16 px-4 border-b border-slate-200 flex items-center gap-3 bg-white shrink-0">
+      <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-xs shrink-0">
+        <span class="material-symbols-outlined text-[18px]">how_to_vote</span>
+      </div>
+      <div class="flex flex-col min-w-0">
+        <span class="text-sm font-semibold text-slate-900 tracking-tight leading-tight truncate">ElectraGuard</span>
+        <span class="text-[11px] text-slate-500 font-normal leading-tight truncate">Election Intelligence</span>
+      </div>
+    </div>
+
+    <!-- Navigation List -->
+    <div class="px-3 py-4">
+      <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2">Operations</div>
+      <nav class="flex flex-col gap-0.5">
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="overview" href="index.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">dashboard</span>
+            <span class="truncate">Overview</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="live-incidents" href="live-incidents.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">emergency</span>
+            <span class="truncate">Live Incidents</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-semibold shrink-0">32</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="tactical-map" href="tactical-map.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">map</span>
+            <span class="truncate">Tactical Map</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="priority-alerts" href="priority-alerts.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">notification_important</span>
+            <span class="truncate">Priority Alerts</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold shrink-0">24</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors bg-blue-50 text-blue-700 font-semibold active" data-path="verification-queue" href="verification-queue.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">fact_check</span>
+            <span class="truncate">Verification Queue</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold shrink-0">146</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="rapid-response" href="rapid-response.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">local_shipping</span>
+            <span class="truncate">Rapid Response</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="analytics-reports" href="analytics.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">insights</span>
+            <span class="truncate">Analytics & Reports</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="citizen-portal" href="citizen-portal.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">stay_current_portrait</span>
+            <span class="truncate">Citizen Portal</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- User Profile Section -->
+  <div class="p-3 border-t border-slate-200 bg-slate-50/70 shrink-0">
+    <div class="flex items-center gap-3 px-2 py-1.5">
+      <div class="w-8 h-8 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center font-medium text-xs text-slate-700 shrink-0">
+        YS
+      </div>
+      <div class="flex flex-col min-w-0 flex-1">
+        <span class="text-xs font-semibold text-slate-800 truncate leading-tight">Yash Singh</span>
+        <span class="text-[11px] text-slate-500 truncate leading-tight mt-0.5">Senior Election Monitor</span>
+      </div>
+      <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0" title="Online & Synced"></span>
+    </div>
+  </div>
+</aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-white/95 backdrop-blur border-b border-slate-200 z-40 px-6 flex items-center justify-between gap-4">
+  <div class="flex items-center gap-3 min-w-0">
+    <h1 class="text-sm font-semibold text-slate-900 tracking-tight truncate">Human-in-the-Loop Verification Queue</h1>
+    <span class="text-slate-300 hidden sm:inline">•</span>
+    <span class="text-xs text-slate-500 hidden sm:inline">2025 General Election Cycle</span>
+  </div>
+
+  <div class="flex-1 max-w-md mx-auto hidden md:block">
+    <div class="relative flex items-center">
+      <span class="material-symbols-outlined absolute left-3 text-slate-400 text-[18px]">search</span>
+      <input class="w-full bg-slate-50 border border-slate-200 rounded-md pl-9 pr-3 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 transition-colors" placeholder="Search incident ID, polling station, district..." type="text"/>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>Live Ingest</span>
+    </div>
+
+    <span class="text-xs text-slate-500 font-medium telemetry-utc-clock hidden lg:inline">16:30:14 UTC</span>
+
+    <button aria-label="Notifications" class="relative p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-md transition-colors" type="button">
+      <span class="material-symbols-outlined text-[20px]">notifications</span>
+      <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500"></span>
+    </button>
+
+    <button class="h-8 px-3.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md flex items-center gap-1.5 shadow-xs transition-colors" type="button">
+      <span class="material-symbols-outlined text-[16px]">add</span>
+      <span>Report Incident</span>
+    </button>
+  </div>
+</header><main class="relative pt-16 min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Operational Queue Header -->
+<div class="bg-white border-b border-slate-200 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+  <div>
+    <h2 class="text-base font-semibold text-slate-900 tracking-tight">Human-in-the-Loop Verification Queue</h2>
+    <p class="text-xs text-slate-500">Cross-examine citizen reports against accredited field observer testimonies</p>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">146 Reports Awaiting Review</span>
+    <span class="text-xs text-slate-500 font-medium">Avg Review Time: 3m 42s</span>
+  </div>
+</div>
+<!-- Filter Segmented Tabs & Operational Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-8 pt-space-4">
+<div class="flex items-center gap-space-4 bg-surface-container-high p-space-2 rounded">
+<button class="px-space-12 py-space-6 rounded bg-surface-container text-primary font-headline-sm text-body-sm flex items-center gap-space-6 shadow-sm">
+<span>Awaiting Review</span>
+<span class="px-space-6 py-space-2 rounded bg-primary text-on-primary font-data-mono-sm text-data-mono-sm font-bold">146</span>
+</button>
+<button class="px-space-12 py-space-6 rounded text-on-surface-variant hover:text-on-surface font-body-md text-body-sm flex items-center gap-space-6">
+<span>Cross-Corroboration</span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-highest text-on-surface font-data-mono-sm text-data-mono-sm">38</span>
+</button>
+<button class="px-space-12 py-space-6 rounded text-on-surface-variant hover:text-on-surface font-body-md text-body-sm flex items-center gap-space-6">
+<span>Disputed / Flagged</span>
+<span class="px-space-6 py-space-2 rounded bg-error-container text-error font-data-mono-sm text-data-mono-sm">14</span>
+</button>
+<button class="px-space-12 py-space-6 rounded text-on-surface-variant hover:text-on-surface font-body-md text-body-sm flex items-center gap-space-6">
+<span>Legally Certified</span>
+<span class="px-space-6 py-space-2 rounded bg-secondary-container text-on-secondary font-data-mono-sm text-data-mono-sm font-bold">312</span>
+</button>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Sort By:</span>
+<select class="h-8 px-space-8 bg-surface-container-high text-on-surface font-body-sm text-body-sm rounded focus:outline-none focus:text-primary">
+<option>Critical Severity &amp; SLA Urgency</option>
+<option>Confidence Score (High to Low)</option>
+<option>Most Witness Corroborations</option>
+<option>Hardware Telemetry Anomalies</option>
+</select>
+<button class="h-8 w-8 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Split Screen Workbench -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-16 p-space-16">
+<!-- Left Column: Priority Incident Queue List (5 cols on xl) -->
+<div class="xl:col-span-5 flex flex-col gap-space-8">
+<div class="flex items-center justify-between px-space-4">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">TRIAGE QUEUE // PRIORITY SORTED</span>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary">AUTO-REFRESH: 5s</span>
+</div>
+<!-- Item 1: Active Selected Card -->
+<div class="bg-surface-container-high p-space-12 rounded flex flex-col gap-space-8 shadow-md relative overflow-hidden cursor-pointer" onclick="selectIncident(1)">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-6">
+<span class="font-data-mono-lg text-data-mono-lg text-primary font-bold">#EG-10482</span>
+<span class="px-space-6 py-space-2 rounded bg-error-container text-error font-label-caps text-label-caps uppercase">CRITICAL</span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-highest text-secondary font-label-caps text-label-caps">QUORUM MET</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-2">Voter Intimidation &amp; Entry Impediment</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-4 mt-space-2">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+              Polling Station #142, North Ward, Sector 7-B
+            </span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-data-mono-lg text-data-mono-lg text-primary">91%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">AI Match</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-8 rounded text-body-sm font-body-sm text-on-surface">
+<span class="text-primary-fixed-dim font-label-caps text-label-caps uppercase font-bold">NLP Dialect Tr:</span>
+          "Group of non-accredited individuals blocking outer voter entrance gate demanding unauthorized paper ID check."
+        </div>
+<div class="flex flex-wrap items-center justify-between gap-space-8 pt-space-4 text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center gap-space-8">
+<span class="flex items-center gap-space-2 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+              L4 Observer (99.4% Trust)
+            </span>
+<span>+ 3 Citizens</span>
+</div>
+<div class="flex items-center gap-space-4">
+<span class="material-symbols-outlined text-[14px] text-primary">photo_camera</span>
+<span>1 Signed Img</span>
+<span class="text-on-surface-variant">|</span>
+<span>02m ago</span>
+</div>
+</div>
+</div>
+<!-- Item 2: EVM Control Unit Integrity -->
+<div class="bg-surface-container p-space-12 rounded hover:bg-surface-container-high transition-colors flex flex-col gap-space-8 shadow-sm cursor-pointer" onclick="selectIncident(2)">
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-6">
+<span class="font-data-mono-lg text-data-mono-lg text-on-surface font-bold">#EG-10481</span>
+<span class="px-space-6 py-space-2 rounded bg-error-container text-error font-label-caps text-label-caps uppercase">HIGH PRIORITY</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-2">EVM Control Unit Seal Integrity Compromise</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-4 mt-space-2">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+              Polling Station #91, South District Annex
+            </span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-data-mono-lg text-data-mono-lg text-error">94%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Anomaly</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-8 rounded text-body-sm font-body-sm text-on-surface">
+<span class="text-error font-label-caps text-label-caps uppercase font-bold">Cryptographic Tag Mismatch:</span>
+          Physical barcode scan <code>CU-99214-X</code> does not match central escrow manifest assigned to Station #91.
+        </div>
+<div class="flex items-center justify-between text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center gap-space-4 text-primary">
+<span class="material-symbols-outlined text-[14px]">engineering</span>
+<span>Field Presiding Officer</span>
+</div>
+<span>08m ago</span>
+</div>
+</div>
+<!-- Item 3: Counterfeit Advisory Posters -->
+<div class="bg-surface-container p-space-12 rounded hover:bg-surface-container-high transition-colors flex flex-col gap-space-8 shadow-sm cursor-pointer" onclick="selectIncident(3)">
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-6">
+<span class="font-data-mono-lg text-data-mono-lg text-on-surface font-bold">#EG-10479</span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase">MODERATE</span>
+<span class="px-space-6 py-space-2 rounded bg-error-container text-error font-label-caps text-label-caps uppercase">OCR DISINFO</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-2">Counterfeit Advisory Posters on Poll Timings</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-4 mt-space-2">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+              Transit Hub Metro Station 4 (Near Polling 22)
+            </span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-data-mono-lg text-data-mono-lg text-primary">88%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Synthetic</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-8 rounded text-body-sm font-body-sm text-on-surface">
+<span class="text-primary font-label-caps text-label-caps uppercase font-bold">Vision LLM Flag:</span>
+          Forged Election Commission watermark falsely stating poll closing shifted from 18:00 to 14:00.
+        </div>
+<div class="flex items-center justify-between text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center gap-space-4 text-on-surface">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>4 Citizen App Uploads</span>
+</div>
+<span>14m ago</span>
+</div>
+</div>
+<!-- Item 4: Auxiliary Generator Voltage Drop -->
+<div class="bg-surface-container p-space-12 rounded hover:bg-surface-container-high transition-colors flex flex-col gap-space-8 shadow-sm cursor-pointer" onclick="selectIncident(4)">
+<div class="flex items-start justify-between gap-space-8">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-6">
+<span class="font-data-mono-lg text-data-mono-lg text-on-surface font-bold">#EG-10477</span>
+<span class="px-space-6 py-space-2 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps uppercase">TELEMETRY</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-2">Auxiliary Generator Voltage Drop &amp; Battery Depletion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-4 mt-space-2">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+              Polling Station #53, Rural Secondary School
+            </span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-data-mono-lg text-data-mono-lg text-error">18m</span>
+<span class="font-label-caps text-label-caps text-error uppercase">Reserve</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-8 rounded text-body-sm font-body-sm text-on-surface">
+<span class="text-secondary font-label-caps text-label-caps uppercase font-bold">IoT Sensor Alert:</span>
+          Main grid offline. UPS battery runtime estimate 18 minutes. Electronic voting lights risk outage.
+        </div>
+<div class="flex items-center justify-between text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center gap-space-4 text-secondary">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>Grid Node GN-53</span>
+</div>
+<span>21m ago</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Evidence & Adjudication Decision Terminal (7 cols on xl) -->
+<div class="xl:col-span-7 flex flex-col gap-space-12">
+<!-- AI Safeguard Advisory -->
+<div class="bg-surface-container-high p-space-12 rounded flex items-start gap-space-12 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px] mt-space-2">verified</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">AI-ASSISTED TRIAGE ONLY // ACCREDITED OBSERVER MANDATE</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-space-2">
+            AI engines cluster duplicate submissions, detect deepfakes, and translate regional dialects. Final legal certification and CEO escalation require accredited human digital signature under Section 42 of the Federal Election Monitoring Protocol.
+          </p>
+</div>
+</div>
+<!-- Active Incident Header -->
+<div class="bg-surface-container p-space-16 rounded flex flex-col gap-space-12 shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-8">
+<div class="flex items-center gap-space-8">
+<span class="font-headline-lg text-headline-lg text-on-surface">DOCKET #EG-10482</span>
+<span class="px-space-8 py-space-2 rounded bg-error-container text-error font-data-mono-sm text-data-mono-sm uppercase font-bold">LEVEL 4 INCIDENT</span>
+</div>
+<div class="flex items-center gap-space-8 font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface-variant">TIMELOCK:</span>
+<span class="text-primary font-bold">04:18 REMAINING IN SLA</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-12">
+<!-- Geospatial Radar & Image Evidence -->
+<div class="flex flex-col gap-space-8">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">GEOSPATIAL PERIMETER PROXIMITY</span>
+<div class="w-full h-44 rounded bg-surface-container-low flex flex-col justify-end p-space-8 relative shadow-inner" data-location="New Delhi, India" style="">
+<div class="absolute top-space-8 left-space-8 bg-surface-container-lowest/90 px-space-6 py-space-2 rounded text-secondary font-data-mono-sm text-data-mono-sm flex items-center gap-space-4">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>GEO-LOCK: 28.6139° N, 77.2090° E</span>
+</div>
+<div class="bg-surface-container-lowest/95 p-space-6 rounded flex items-center justify-between text-on-surface font-data-mono-sm text-data-mono-sm">
+<span>RADIAL OFFSET: <strong class="text-secondary">42m from Gate 2</strong></span>
+<span class="text-secondary">VALIDATED (100m ZONE)</span>
+</div>
+</div>
+<!-- Cryptographic Image Proof Thumbnail -->
+<div class="bg-surface-container-high p-space-8 rounded flex gap-space-8 items-center">
+<img class="w-24 h-20 rounded object-cover flex-shrink-0" data-alt="Tactical evidence photo of an election polling perimeter gate with security barricades and civil crowd gathering under harsh daylight, documentary forensic aesthetic with metadata stamp overlay in amber and cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMANeE3rheYsAbEuW9vC-WTIij4EU1MMg67CPZj3PKsvonj01Ey_UZbSessbth42kYSKsY7GhNqyPy94Z-Vor48jM_dr6Ck3v8tPqwCOIAbiZn5ssqfZSbFmevHZugtgaSdlfiQnyvh1QnOrjClVflCUeAfXIhyzFBnA1WcA4tRz1yBnFbytI-QOxaAw6WnPaOQYgBQ6Io8yPWesc2xdgGOu3CFs9l9bk05pg1xIHHdogpEFwt9KQL"/>
+<div class="flex flex-col min-w-0">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold truncate">EVID_IMG_10482_SEC2.RAW</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">EXIF: 2025-05-12 14:28:12 UTC</span>
+<span class="font-label-caps text-label-caps text-secondary mt-space-2">C2PA SIGNED // HARDWARE SECURE ENCLAVE</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate mt-space-2">SHA: 9f8a3c2098...44d71b</span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Integrity & Hash Inspector -->
+<div class="flex flex-col gap-space-8">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">CRYPTOGRAPHIC ATTESTATION</span>
+<div class="bg-surface-container-low p-space-12 rounded flex flex-col gap-space-8 font-data-mono-sm text-data-mono-sm">
+<div>
+<span class="text-on-surface-variant block">OBSERVER PUBLIC KEY</span>
+<span class="text-primary truncate block">ed25519:3b19fc77e4a091d...ae08</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">MERKLE ROOT HASH</span>
+<span class="text-on-surface truncate block">0x77d12f3890eebca18921a938...</span>
+</div>
+<div class="flex items-center justify-between pt-space-4">
+<span class="text-on-surface-variant">TIMESTAMP DRIFT:</span>
+<span class="text-secondary font-semibold">+0.14s (NTP SYNC)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">HARDWARE ATTESTATION:</span>
+<span class="text-secondary font-semibold">TPM 2.0 PASS</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">AI DEEPFAKE ANALYSIS:</span>
+<span class="text-secondary font-semibold">0.03% (GENUINE PHOTO)</span>
+</div>
+</div>
+<!-- NLP Translation Card -->
+<div class="bg-surface-container-high p-space-8 rounded flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase">Audio / Text NLP Dialect Triage</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Confidence: 98.4%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                Original Dialect (Hindi-Haryanvi): "गेट नंबर दो पर कुछ लोग वोटर पर्चियां छीन रहे हैं और बिना अधिकृत पहचान के वापस भेज रहे हैं।"
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Standard EN: "At Gate No. 2, unauthorized persons are confiscating voter slips and turning citizens away without legal authority."
+              </p>
+</div>
+</div>
+</div>
+<!-- Multi-Witness Cross-Corroboration Matrix -->
+<div class="flex flex-col gap-space-6 pt-space-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">MULTI-WITNESS CORROBORATION MATRIX (3 OF 3 ACTIVE)</span>
+<span class="px-space-6 py-space-2 rounded bg-secondary/15 text-secondary font-data-mono-sm text-data-mono-sm font-semibold">STATUTORY QUORUM ACHIEVED</span>
+</div>
+<div class="space-y-space-4">
+<!-- Source 1 -->
+<div class="bg-surface-container-high p-space-8 rounded flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<div>
+<span class="font-semibold text-on-surface">Observer #OBS-402 (Accredited L4)</span>
+<span class="text-on-surface-variant block text-body-sm">"Group of 8 individuals obstructing gate 2. Wearing private insignia. Refusing line entry."</span>
+</div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-semibold">TRUST 99.4%</span>
+</div>
+<!-- Source 2 -->
+<div class="bg-surface-container-high p-space-8 rounded flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-primary text-[18px]">smartphone</span>
+<div>
+<span class="font-semibold text-on-surface">Citizen App Report #C-8812 (Encrypted GeoTag)</span>
+<span class="text-on-surface-variant block text-body-sm">"Cannot enter, men taking photos of voter slips and recording phone numbers."</span>
+</div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">CORROBORATED</span>
+</div>
+<!-- Source 3 -->
+<div class="bg-surface-container-high p-space-8 rounded flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-8">
+<span class="material-symbols-outlined text-primary text-[18px]">smartphone</span>
+<div>
+<span class="font-semibold text-on-surface">Citizen App Report #C-8819</span>
+<span class="text-on-surface-variant block text-body-sm">"Queue halted since 25 mins. Police van on other side not responding."</span>
+</div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">CORROBORATED</span>
+</div>
+</div>
+</div>
+<!-- Adjudication Verification Form & Terminal Actions -->
+<div class="bg-surface-container-low p-space-12 rounded flex flex-col gap-space-12 mt-space-4 shadow-inner">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider">LEGAL ADJUDICATION &amp; FIELD INJUNCTION TERMINAL</span>
+<!-- Checkbox Confirmations -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-8">
+<label class="flex items-center gap-space-8 cursor-pointer bg-surface-container-highest p-space-8 rounded">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container-lowest" id="chk-witness" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Dual Witness Quorum Met</span>
+</label>
+<label class="flex items-center gap-space-8 cursor-pointer bg-surface-container-highest p-space-8 rounded">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container-lowest" id="chk-gps" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">GPS 100m Perimeter Match</span>
+</label>
+<label class="flex items-center gap-space-8 cursor-pointer bg-surface-container-highest p-space-8 rounded">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container-lowest" id="chk-hash" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Media SHA-256 Validated</span>
+</label>
+</div>
+<!-- Auditor Annotations Field -->
+<div class="flex flex-col gap-space-4">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Auditor Legal Finding Notes (Appended to Immutable Escrow Ledger)</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm p-space-8 rounded focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Enter findings or tactical instructions for field quick-response team..." rows="2">Confirmed physical voter obstruction at Gate 2 of PS #142. Evidence meets Section 131 Representation of the People Act standards. Request immediate deployment of Sector Magistrate flying squad.</textarea>
+</div>
+<!-- Action Buttons Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-8 pt-space-4">
+<!-- Green: Verify & Cryptographically Sign -->
+<button class="h-10 px-space-12 rounded bg-secondary-container hover:bg-secondary text-on-secondary-container font-headline-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-space-6 shadow-sm" onclick="adjudicateAction('VERIFIED')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Verify &amp; Sign Docket</span>
+</button>
+<!-- Amber: Request Field Telemetry -->
+<button class="h-10 px-space-12 rounded bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-space-6 shadow-sm" onclick="adjudicateAction('TELEMETRY_REQ')">
+<span class="material-symbols-outlined text-[18px]">contact_support</span>
+<span>Request Field Comms</span>
+</button>
+<!-- Red Outline: Reject as Disinfo -->
+<button class="h-10 px-space-12 rounded bg-surface-container-highest text-error hover:bg-error-container hover:text-on-error-container font-headline-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-space-6 shadow-sm" onclick="adjudicateAction('REJECTED')">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Reject (Disinfo)</span>
+</button>
+<!-- Red Solid: Escalate to CEO Hotline -->
+<button class="h-10 px-space-12 rounded bg-error text-on-error hover:bg-error/90 font-headline-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-space-6 shadow-sm" onclick="adjudicateAction('CEO_ESCALATED')">
+<span class="material-symbols-outlined text-[18px]">fmd_bad</span>
+<span>Escalate to CEO</span>
+</button>
+</div>
+<!-- Live Status Feedback Toast Area -->
+<div class="hidden p-space-8 rounded bg-surface-container-highest text-secondary font-data-mono-sm text-data-mono-sm flex items-center justify-between" id="status-toast">
+<span id="status-msg">Docket signed and dispatched to National Dispatch Queue.</span>
+<span class="text-on-surface-variant font-label-caps text-label-caps">TX: 0x88f2...ea01</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function adjudicateAction(type) {
+      const toast = document.getElementById('status-toast');
+      const msg = document.getElementById('status-msg');
+      if (!toast || !msg) return;
+
+      toast.classList.remove('hidden');
+
+      if (type === 'VERIFIED') {
+        msg.textContent = 'DOCKET #EG-10482 VERIFIED. Ed25519 cryptographic signature generated. Dispatched to CEO Escrow & Flying Squad.';
+        toast.className = 'p-space-8 rounded bg-surface-container-highest text-secondary font-data-mono-sm text-data-mono-sm flex items-center justify-between shadow-sm';
+      } else if (type === 'TELEMETRY_REQ') {
+        msg.textContent = 'FIELD TELEMETRY DISPATCH: Ping sent to Presiding Officer & Sector Observer #OBS-402 for direct radio voice link.';
+        toast.className = 'p-space-8 rounded bg-surface-container-highest text-primary font-data-mono-sm text-data-mono-sm flex items-center justify-between shadow-sm';
+      } else if (type === 'REJECTED') {
+        msg.textContent = 'FLAGGED AS DISINFORMATION: Ingest feeds tagged. Forensic log archived with negative trust impact.';
+        toast.className = 'p-space-8 rounded bg-surface-container-highest text-on-surface-variant font-data-mono-sm text-data-mono-sm flex items-center justify-between shadow-sm';
+      } else if (type === 'CEO_ESCALATED') {
+        msg.textContent = 'HOTLINE TRIGGERED: Direct high-priority alert routed to Chief Electoral Officer and Law Enforcement liaison.';
+        toast.className = 'p-space-8 rounded bg-error-container text-on-error-container font-data-mono-sm text-data-mono-sm flex items-center justify-between shadow-sm font-bold';
+      }
+    }
+
+    function selectIncident(id) {
+      // Micro-interaction handler for switching active card
+      console.log('Selected Incident ID:', id);
+    }
+  </script>
+</div></main></div>
+<script src="assets/js/telemetry.js"></script>
+<script src="assets/js/modal-certify.js"></script>
+<script src="assets/js/nav.js"></script>
+</body></html>

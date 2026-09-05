@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors": {
+  "background": "#f8fafc",
+  "surface": "#ffffff",
+  "surface-dim": "#f1f5f9",
+  "surface-bright": "#ffffff",
+  "surface-container-lowest": "#ffffff",
+  "surface-container-low": "#f8fafc",
+  "surface-container": "#f1f5f9",
+  "surface-container-high": "#e2e8f0",
+  "surface-container-highest": "#cbd5e1",
+  "surface-variant": "#e2e8f0",
+  "surface-tint": "#2563eb",
+  "inverse-surface": "#0f172a",
+  "inverse-on-surface": "#ffffff",
+  "on-surface": "#0f172a",
+  "on-surface-variant": "#334155",
+  "on-background": "#0f172a",
+  "outline": "#475569",
+  "outline-variant": "#64748b",
+  "primary": "#2563eb",
+  "on-primary": "#ffffff",
+  "primary-container": "#eff6ff",
+  "on-primary-container": "#1e40af",
+  "primary-fixed": "#dbeafe",
+  "primary-fixed-dim": "#bfdbfe",
+  "on-primary-fixed": "#1e3a8a",
+  "on-primary-fixed-variant": "#1d4ed8",
+  "inverse-primary": "#60a5fa",
+  "secondary": "#059669",
+  "on-secondary": "#ffffff",
+  "secondary-container": "#ecfdf5",
+  "on-secondary-container": "#065f46",
+  "secondary-fixed": "#a7f3d0",
+  "secondary-fixed-dim": "#6ee7b7",
+  "on-secondary-fixed": "#022c22",
+  "on-secondary-fixed-variant": "#047857",
+  "error": "#dc2626",
+  "on-error": "#ffffff",
+  "error-container": "#fef2f2",
+  "on-error-container": "#991b1b",
+  "tertiary": "#0284c7",
+  "on-tertiary": "#ffffff",
+  "tertiary-container": "#f0f9ff",
+  "on-tertiary-container": "#075985",
+  "tertiary-fixed": "#bae6fd",
+  "tertiary-fixed-dim": "#7dd3fc",
+  "on-tertiary-fixed": "#082f49",
+  "on-tertiary-fixed-variant": "#0369a1"
+},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-8":"0.5rem","inspector-width":"24rem","space-32":"2rem","space-12":"0.75rem","space-4":"0.25rem","space-6":"0.375rem","space-2":"0.125rem","sidebar-width":"20rem","panel-gutter":"0.75rem","space-20":"1.25rem","space-16":"1rem","space-24":"1.5rem"},"fontFamily": {
+  "headline-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "display-lg-mobile": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "data-mono-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-sm": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "headline-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "label-caps": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "body-md": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "display-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+  "data-mono-lg": ["Inter", "system-ui", "-apple-system", "sans-serif"]
+},"fontSize":{"data-mono-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"data-mono-lg":["14px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-caps":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}]}}}};</script><link rel="stylesheet" href="assets/css/tactical-theme.css"/>
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-white border-r border-slate-200 z-50 flex flex-col justify-between select-none shadow-xs">
+  <div class="flex flex-col">
+    <!-- Brand Header -->
+    <div class="h-16 px-4 border-b border-slate-200 flex items-center gap-3 bg-white shrink-0">
+      <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-xs shrink-0">
+        <span class="material-symbols-outlined text-[18px]">how_to_vote</span>
+      </div>
+      <div class="flex flex-col min-w-0">
+        <span class="text-sm font-semibold text-slate-900 tracking-tight leading-tight truncate">ElectraGuard</span>
+        <span class="text-[11px] text-slate-500 font-normal leading-tight truncate">Election Intelligence</span>
+      </div>
+    </div>
+
+    <!-- Navigation List -->
+    <div class="px-3 py-4">
+      <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2">Operations</div>
+      <nav class="flex flex-col gap-0.5">
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors bg-blue-50 text-blue-700 font-semibold active" data-path="overview" href="index.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">dashboard</span>
+            <span class="truncate">Overview</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="live-incidents" href="live-incidents.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">emergency</span>
+            <span class="truncate">Live Incidents</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-semibold shrink-0">32</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="tactical-map" href="tactical-map.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">map</span>
+            <span class="truncate">Tactical Map</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="priority-alerts" href="priority-alerts.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">notification_important</span>
+            <span class="truncate">Priority Alerts</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold shrink-0">24</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="verification-queue" href="verification-queue.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">fact_check</span>
+            <span class="truncate">Verification Queue</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold shrink-0">146</span>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="rapid-response" href="rapid-response.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">local_shipping</span>
+            <span class="truncate">Rapid Response</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="analytics-reports" href="analytics.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">insights</span>
+            <span class="truncate">Analytics & Reports</span>
+          </div>
+        </a>
+        <a class="flex items-center justify-between px-3 py-2 rounded-md text-[13px] transition-colors font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900" data-path="citizen-portal" href="citizen-portal.html">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="material-symbols-outlined text-[18px] shrink-0">stay_current_portrait</span>
+            <span class="truncate">Citizen Portal</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- User Profile Section -->
+  <div class="p-3 border-t border-slate-200 bg-slate-50/70 shrink-0">
+    <div class="flex items-center gap-3 px-2 py-1.5">
+      <div class="w-8 h-8 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center font-medium text-xs text-slate-700 shrink-0">
+        YS
+      </div>
+      <div class="flex flex-col min-w-0 flex-1">
+        <span class="text-xs font-semibold text-slate-800 truncate leading-tight">Yash Singh</span>
+        <span class="text-[11px] text-slate-500 truncate leading-tight mt-0.5">Senior Election Monitor</span>
+      </div>
+      <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0" title="Online & Synced"></span>
+    </div>
+  </div>
+</aside><div class="pl-64 min-h-screen bg-surface"><header class="fixed top-0 left-64 right-0 h-16 bg-white/95 backdrop-blur border-b border-slate-200 z-40 px-6 flex items-center justify-between gap-4">
+  <div class="flex items-center gap-3 min-w-0">
+    <h1 class="text-sm font-semibold text-slate-900 tracking-tight truncate">Executive Operations Dashboard</h1>
+    <span class="text-slate-300 hidden sm:inline">•</span>
+    <span class="text-xs text-slate-500 hidden sm:inline">2025 General Election Cycle</span>
+  </div>
+
+  <div class="flex-1 max-w-md mx-auto hidden md:block">
+    <div class="relative flex items-center">
+      <span class="material-symbols-outlined absolute left-3 text-slate-400 text-[18px]">search</span>
+      <input class="w-full bg-slate-50 border border-slate-200 rounded-md pl-9 pr-3 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-600 transition-colors" placeholder="Search incident ID, polling station, district..." type="text"/>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>Live Ingest</span>
+    </div>
+
+    <span class="text-xs text-slate-500 font-medium telemetry-utc-clock hidden lg:inline">16:30:14 UTC</span>
+
+    <button aria-label="Notifications" class="relative p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-md transition-colors" type="button">
+      <span class="material-symbols-outlined text-[20px]">notifications</span>
+      <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500"></span>
+    </button>
+
+    <button class="h-8 px-3.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md flex items-center gap-1.5 shadow-xs transition-colors" type="button">
+      <span class="material-symbols-outlined text-[16px]">add</span>
+      <span>Report Incident</span>
+    </button>
+  </div>
+</header><main class="w-full pt-16 bg-surface px-panel-gutter"><div class="flex flex-col w-full pb-space-24 gap-space-12">
+<!-- Clean 4-Card KPI Summary -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+  <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-xs flex flex-col justify-between">
+    <div class="flex items-center justify-between text-slate-500 text-xs font-medium">
+      <span>Total Reports</span>
+      <span class="inline-flex items-center text-emerald-600 font-semibold text-xs">
+        <span class="material-symbols-outlined text-[16px]">trending_up</span>+18%
+      </span>
+    </div>
+    <div class="mt-3 flex items-baseline justify-between">
+      <span class="text-2xl font-bold text-slate-900 tracking-tight">1,284</span>
+      <span class="text-xs text-slate-500">Past 12 hours</span>
+    </div>
+    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-3">
+      <div class="bg-blue-600 h-full w-3/4 rounded-full"></div>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-xs flex flex-col justify-between">
+    <div class="flex items-center justify-between text-slate-500 text-xs font-medium">
+      <span>Critical Anomalies</span>
+      <span class="px-2 py-0.5 rounded-full bg-red-50 text-red-700 font-semibold text-xs">Immediate</span>
+    </div>
+    <div class="mt-3 flex items-baseline justify-between">
+      <span class="text-2xl font-bold text-rose-600 tracking-tight">14</span>
+      <span class="text-xs text-slate-500">Sector 4B & Dist 07</span>
+    </div>
+    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-3">
+      <div class="bg-rose-500 h-full w-1/4 rounded-full"></div>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-xs flex flex-col justify-between">
+    <div class="flex items-center justify-between text-slate-500 text-xs font-medium">
+      <span>Pending Verification</span>
+      <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-semibold text-xs">In Queue</span>
+    </div>
+    <div class="mt-3 flex items-baseline justify-between">
+      <span class="text-2xl font-bold text-slate-900 tracking-tight">146</span>
+      <span class="text-xs text-slate-500">Avg time: 4m</span>
+    </div>
+    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-3">
+      <div class="bg-amber-500 h-full w-1/2 rounded-full"></div>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-xs flex flex-col justify-between">
+    <div class="flex items-center justify-between text-slate-500 text-xs font-medium">
+      <span>Resolution Rate</span>
+      <span class="text-emerald-600 font-semibold text-xs flex items-center gap-1">
+        <span class="material-symbols-outlined text-[16px]">verified</span>89.2%
+      </span>
+    </div>
+    <div class="mt-3 flex items-baseline justify-between">
+      <span class="text-2xl font-bold text-emerald-600 tracking-tight">1,124</span>
+      <span class="text-xs text-slate-500">Audited & Closed</span>
+    </div>
+    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-3">
+      <div class="bg-emerald-500 h-full w-[89.2%] rounded-full"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN SPLIT WORKSPACE -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-12 w-full items-start">
+<!-- LEFT & CENTER REGION: 65% (8/12 cols) -->
+<section class="xl:col-span-8 flex flex-col gap-space-12 min-w-0">
+<!-- TACTICAL GEOSPATIAL MAP CENTERPIECE -->
+<div class="relative w-full bg-surface-container-lowest rounded overflow-hidden shadow-md flex flex-col min-h-[460px] h-[480px]">
+<!-- Tactical Header Bar over Map -->
+<div class="absolute top-0 left-0 right-0 z-20 bg-surface-container-lowest/90 backdrop-blur px-space-16 py-space-8 flex flex-wrap items-center justify-between gap-space-8">
+<div class="flex items-center gap-space-12">
+<span class="font-label-caps text-label-caps text-primary uppercase flex items-center gap-space-6">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>GEOSPATIAL SITUATION GRID
+            </span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline hidden sm:inline">Sector 4B & District 07 • Live Situation</span>
+</div>
+<!-- Controls: Filters and Layer Selectors -->
+<div class="flex items-center gap-space-6 flex-wrap">
+<div class="flex items-center bg-surface-container-high rounded p-0.5">
+<button class="px-space-8 py-space-2 text-[10px] font-data-mono-sm uppercase rounded bg-surface-container-highest text-on-surface font-bold">All (238)</button>
+<button class="px-space-8 py-space-2 text-[10px] font-data-mono-sm uppercase rounded text-error hover:bg-surface-container-highest">Crit (24)</button>
+<button class="px-space-8 py-space-2 text-[10px] font-data-mono-sm uppercase rounded text-primary hover:bg-surface-container-highest">High (87)</button>
+<button class="px-space-8 py-space-2 text-[10px] font-data-mono-sm uppercase rounded text-surface-tint hover:bg-surface-container-highest">Med (95)</button>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-space-8 py-space-4 rounded flex items-center gap-space-4 font-data-mono-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px] text-primary">layers</span>Layers
+            </button>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface p-space-4 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">crop_free</span>
+</button>
+</div>
+</div>
+<!-- Simulated Geospatial SVG Canvas -->
+<div class="relative w-full h-full flex-1 bg-surface-container-lowest overflow-hidden select-none">
+<!-- Background Coordinate Grid -->
+<svg class="absolute inset-0 w-full h-full text-surface-container-high/40 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="tacticalGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" opacity="0.3" stroke="currentColor" stroke-width="0.75"></path>
+<circle cx="40" cy="40" fill="#a08e7a" opacity="0.25" r="1"></circle>
+</pattern>
+<!-- Heatmap radial glows -->
+<radialgradient cx="50%" cy="50%" id="heatRed" r="50%">
+<stop offset="0%" stop-color="#ef4444" stop-opacity="0.35"></stop>
+<stop offset="60%" stop-color="#ef4444" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#ef4444" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="heatAmber" r="50%">
+<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"></stop>
+<stop offset="70%" stop-color="#f59e0b" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#f59e0b" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<rect fill="url(#tacticalGrid)" height="100%" width="100%"></rect>
+<!-- District Electoral Polygons / Boundaries -->
+<path d="M 40,60 L 220,40 L 320,130 L 210,240 L 60,200 Z" fill="#f1f5f9" opacity="0.8" stroke="#cbd5e1" stroke-width="1.2"></path>
+<path d="M 220,40 L 480,30 L 580,160 L 490,260 L 320,130 Z" fill="#ffffff" opacity="0.8" stroke="#cbd5e1" stroke-width="1.2"></path>
+<path d="M 490,260 L 580,160 L 760,200 L 710,380 L 520,390 Z" fill="#f1f5f9" opacity="0.8" stroke="#cbd5e1" stroke-width="1.2"></path>
+<path d="M 210,240 L 320,130 L 490,260 L 410,420 L 180,380 Z" fill="#16253b" opacity="0.9" stroke="#37485e" stroke-width="1.5"></path>
+<path d="M 410,420 L 490,260 L 520,390 L 460,470 Z" fill="#ffffff" opacity="0.8" stroke="#cbd5e1" stroke-width="1.2"></path>
+<!-- Hotspot Heatmap Contours -->
+<circle cx="340" cy="240" fill="url(#heatAmber)" r="140"></circle>
+<circle cx="330" cy="220" fill="url(#heatRed)" r="85"></circle>
+<circle cx="620" cy="250" fill="url(#heatAmber)" r="95"></circle>
+<!-- Constituency IDs / Tactical Labels -->
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="10" opacity="0.6" x="120" y="140">DIST-04 WEST</text>
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="10" opacity="0.6" x="360" y="90">DIST-05 METRO</text>
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="10" opacity="0.6" x="610" y="160">DIST-06 EAST</text>
+<text fill="#ffc174" font-family="JetBrains Mono" font-size="11" font-weight="700" opacity="0.9" x="240" y="320">DIST-07 [ACTIVE SECTOR 4B]</text>
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="10" opacity="0.6" x="580" y="340">DIST-08 SOUTH</text>
+</svg>
+<!-- INTERACTIVE INCIDENT MARKERS ON MAP -->
+<!-- 1. CRITICAL: EG-10481 (EVM Tampering) -->
+<div class="absolute top-[180px] left-[260px] -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+<span class="absolute -inset-3 rounded-full bg-error/20 animate-ping"></span>
+<span class="absolute -inset-1.5 rounded-full bg-error/40"></span>
+<div class="relative w-7 h-7 rounded-full bg-error-container text-on-error flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+</div>
+<!-- Popover Tooltip on Hover -->
+<div class="absolute left-9 -top-3 bg-surface-container-lowest/95 backdrop-blur px-space-12 py-space-6 rounded shadow-xl whitespace-nowrap z-30 pointer-events-none hidden group-hover:flex flex-col">
+<span class="font-data-mono-sm text-[10px] text-error font-bold tracking-wider">CRITICAL • #EG-10481</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">EVM Tampering Attempt - Dist 7</span>
+<span class="font-data-mono-sm text-[10px] text-outline">PS #91 • 9 mins ago • Corroborated</span>
+</div>
+</div>
+<!-- 2. HIGH SEVERITY / CURRENT WORKBENCH FOCUS: EG-10482 (Voter Intimidation) -->
+<div class="absolute top-[245px] left-[340px] -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
+<!-- Focused halo effect -->
+<span class="absolute -inset-4 rounded-full bg-primary/20 animate-pulse"></span>
+<div class="relative w-8 h-8 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center shadow-xl ring-2 ring-surface">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<!-- Persistent Callout Badge -->
+<div class="absolute left-10 -top-4 bg-surface-container-high px-space-8 py-space-4 rounded shadow-xl flex items-center gap-space-8 whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-data-mono-sm text-[10px] text-primary font-bold">SELECTED • #EG-10482</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Voter Intimidation - PS #142</span>
+</div>
+</div>
+</div>
+<!-- 3. CLUSTER BADGE (+14 Reports Sector 4B) -->
+<div class="absolute top-[280px] left-[290px] -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer">
+<div class="bg-surface-container-highest/90 text-primary hover:bg-primary hover:text-on-primary transition-colors px-space-8 py-space-4 rounded-full shadow-lg flex items-center gap-space-4 font-data-mono-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[13px]">hub</span>
+              +14 Reports in Sector 4B
+            </div>
+</div>
+<!-- 4. MEDIUM: EG-10480 (Queue Bottleneck) -->
+<div class="absolute top-[140px] left-[490px] -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+<div class="w-6 h-6 rounded-full bg-surface-tint/90 text-on-primary-fixed font-bold flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+</div>
+<div class="absolute left-7 -top-2 bg-surface-container-lowest px-space-8 py-space-4 rounded shadow-lg whitespace-nowrap hidden group-hover:flex flex-col">
+<span class="font-data-mono-sm text-[10px] text-surface-tint">MEDIUM • #EG-10480</span>
+<span class="font-body-sm text-body-sm text-on-surface">Queue Bottleneck &gt; 3.5 hrs</span>
+</div>
+</div>
+<!-- 5. OBSERVER LOCATION PIN -->
+<div class="absolute top-[210px] left-[410px] -translate-x-1/2 -translate-y-1/2 z-10" title="Accredited Observer Active">
+<div class="flex items-center gap-space-4 bg-surface-container-high/90 px-space-6 py-space-2 rounded font-data-mono-sm text-[9px] text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>OBS-402 (FIELD)
+            </div>
+</div>
+<!-- 6. LOW: EG-10475 (Signage Obscured) -->
+<div class="absolute top-[340px] left-[560px] -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">info</span>
+</div>
+<div class="absolute left-6 -top-2 bg-surface-container-lowest px-space-8 py-space-4 rounded shadow whitespace-nowrap hidden group-hover:flex flex-col">
+<span class="font-data-mono-sm text-[10px] text-outline">LOW • #EG-10475</span>
+<span class="font-body-sm text-body-sm text-on-surface">Signage Obscured - PS #12</span>
+</div>
+</div>
+<!-- Latitude / Longitude HUD Coordinates in bottom corner -->
+<div class="absolute bottom-2 left-3 font-data-mono-sm text-[10px] text-outline pointer-events-none flex gap-space-12 bg-surface-container-lowest/80 px-space-6 py-space-2 rounded">
+<span>GRID: LAT 28°36'50"N</span>
+<span>LON 77°12'32"E</span>
+<span class="text-secondary">GEOHASH: ttng31z</span>
+</div>
+<!-- Tactical Map Mini-Legend & Overlay Tools -->
+<div class="absolute bottom-2 right-3 bg-surface-container-lowest/90 backdrop-blur p-space-8 rounded shadow-lg flex flex-col gap-space-4 font-data-mono-sm text-[10px]">
+<div class="flex items-center gap-space-8">
+<span class="w-2 h-2 rounded-full bg-error"></span><span class="text-on-surface-variant">Critical (P1)</span>
+<span class="w-2 h-2 rounded-full bg-primary ml-space-8"></span><span class="text-on-surface-variant">High (P2)</span>
+</div>
+<div class="flex items-center gap-space-8">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span><span class="text-on-surface-variant">Medium (P3)</span>
+<span class="w-2 h-2 rounded-full bg-secondary ml-space-8"></span><span class="text-on-surface-variant">Field Observers</span>
+</div>
+</div>
+<!-- Zoom & Pan Controls -->
+<div class="absolute top-14 right-3 flex flex-col gap-space-4">
+<button class="w-7 h-7 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded flex items-center justify-center font-bold shadow">+</button>
+<button class="w-7 h-7 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded flex items-center justify-center font-bold shadow">−</button>
+<button class="w-7 h-7 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[14px]">my_location</span>
+</button>
+</div>
+</div>
+</div>
+<!-- INCIDENT FEED & TRIAGE TABLE -->
+<div class="bg-surface-container rounded shadow-sm overflow-hidden flex flex-col">
+<!-- Feed Navigation Tabs & Filter Strip -->
+<div class="flex flex-wrap items-center justify-between px-space-16 pt-space-12 pb-space-8 bg-surface-container-low gap-space-8">
+<div class="flex items-center gap-space-4">
+<button class="px-space-12 py-space-6 bg-surface-container-high text-primary font-headline-sm text-body-sm font-semibold rounded flex items-center gap-space-6 shadow-sm">
+<span>Live Ingest</span>
+<span class="bg-primary/20 text-primary font-data-mono-sm text-[10px] px-space-4 py-0.5 rounded font-bold">32 new</span>
+</button>
+<button class="px-space-12 py-space-6 text-on-surface-variant hover:text-on-surface font-headline-sm text-body-sm rounded flex items-center gap-space-6">
+<span>Critical Queue</span>
+<span class="bg-error-container/30 text-error font-data-mono-sm text-[10px] px-space-4 py-0.5 rounded font-bold">24</span>
+</button>
+<button class="px-space-12 py-space-6 text-on-surface-variant hover:text-on-surface font-headline-sm text-body-sm rounded flex items-center gap-space-6">
+<span>Awaiting Verification</span>
+<span class="bg-surface-container-highest text-surface-tint font-data-mono-sm text-[10px] px-space-4 py-0.5 rounded font-bold">146</span>
+</button>
+<button class="px-space-12 py-space-6 text-on-surface-variant hover:text-on-surface font-headline-sm text-body-sm rounded">
+              Resolved
+            </button>
+</div>
+<div class="flex items-center gap-space-8 font-data-mono-sm text-data-mono-sm text-outline">
+<span>FILTER:</span>
+<span class="bg-surface-container-highest text-on-surface px-space-6 py-space-2 rounded text-[11px]">All Sectors ▾</span>
+<button class="hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Triage Data Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-caps text-label-caps uppercase">
+<th class="py-space-8 px-space-12">ID</th>
+<th class="py-space-8 px-space-12">Anomaly Type</th>
+<th class="py-space-8 px-space-12">Location &amp; Station</th>
+<th class="py-space-8 px-space-12">Severity</th>
+<th class="py-space-8 px-space-12">Reporter Trust</th>
+<th class="py-space-8 px-space-12">Status</th>
+<th class="py-space-8 px-space-12 text-right">Age</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Active Row #EG-10482 -->
+<tr class="bg-surface-container-highest/70 hover:bg-surface-container-highest cursor-pointer transition-colors text-on-surface">
+<td class="py-space-8 px-space-12 font-data-mono-sm text-data-mono-sm text-primary font-bold">
+                  #EG-10482
+                </td>
+<td class="py-space-8 px-space-12 font-medium">
+<div class="flex items-center gap-space-6">
+<span class="material-symbols-outlined text-primary text-[16px]">gavel</span>
+<span>Voter Intimidation</span>
+</div>
+</td>
+<td class="py-space-8 px-space-12 text-on-surface-variant">
+                  PS #142, North Ward, Sec 4B
+                </td>
+<td class="py-space-8 px-space-12">
+<span class="bg-primary-container/20 text-primary border-none font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-semibold uppercase tracking-wider">High</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="text-secondary font-data-mono-sm text-[11px] font-medium flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>L4 Civil Observer
+                  </span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="bg-surface-container-low text-primary font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-bold uppercase">Under Review</span>
+</td>
+<td class="py-space-8 px-space-12 text-right font-data-mono-sm text-data-mono-sm text-outline">
+                  4m ago
+                </td>
+</tr>
+<!-- Row #EG-10481 -->
+<tr class="bg-surface-container-low hover:bg-surface-container-highest/40 cursor-pointer transition-colors text-on-surface">
+<td class="py-space-8 px-space-12 font-data-mono-sm text-data-mono-sm text-error font-bold">
+                  #EG-10481
+                </td>
+<td class="py-space-8 px-space-12 font-medium">
+<div class="flex items-center gap-space-6">
+<span class="material-symbols-outlined text-error text-[16px]">lock_reset</span>
+<span>EVM Tampering Attempt</span>
+</div>
+</td>
+<td class="py-space-8 px-space-12 text-on-surface-variant">
+                  PS #91, South District 7
+                </td>
+<td class="py-space-8 px-space-12">
+<span class="bg-error-container/30 text-error font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-semibold uppercase tracking-wider">Critical</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="text-on-surface-variant font-data-mono-sm text-[11px]">3 Citizens + Video</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="bg-secondary/10 text-secondary font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-bold uppercase">Corroborated</span>
+</td>
+<td class="py-space-8 px-space-12 text-right font-data-mono-sm text-data-mono-sm text-outline">
+                  9m ago
+                </td>
+</tr>
+<!-- Row #EG-10480 -->
+<tr class="bg-surface-container hover:bg-surface-container-highest/40 cursor-pointer transition-colors text-on-surface">
+<td class="py-space-8 px-space-12 font-data-mono-sm text-data-mono-sm text-surface-tint">
+                  #EG-10480
+                </td>
+<td class="py-space-8 px-space-12">
+<div class="flex items-center gap-space-6">
+<span class="material-symbols-outlined text-surface-tint text-[16px]">hourglass_top</span>
+<span>Extreme Queue Bottleneck</span>
+</div>
+</td>
+<td class="py-space-8 px-space-12 text-on-surface-variant">
+                  PS #87, Central Ward
+                </td>
+<td class="py-space-8 px-space-12">
+<span class="bg-surface-container-highest text-surface-tint font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-semibold uppercase tracking-wider">Medium</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="text-on-surface-variant font-data-mono-sm text-[11px]">11 Citizen Reports</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="bg-secondary/10 text-secondary font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-bold uppercase">Corroborated</span>
+</td>
+<td class="py-space-8 px-space-12 text-right font-data-mono-sm text-data-mono-sm text-outline">
+                  14m ago
+                </td>
+</tr>
+<!-- Row #EG-10479 -->
+<tr class="bg-surface-container-low hover:bg-surface-container-highest/40 cursor-pointer transition-colors text-on-surface">
+<td class="py-space-8 px-space-12 font-data-mono-sm text-data-mono-sm text-error font-bold">
+                  #EG-10479
+                </td>
+<td class="py-space-8 px-space-12 font-medium">
+<div class="flex items-center gap-space-6">
+<span class="material-symbols-outlined text-error text-[16px]">warning</span>
+<span>Ballot Box Seal Defect</span>
+</div>
+</td>
+<td class="py-space-8 px-space-12 text-on-surface-variant">
+                  PS #204, East District 6
+                </td>
+<td class="py-space-8 px-space-12">
+<span class="bg-error-container/30 text-error font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-semibold uppercase tracking-wider">Critical</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="text-secondary font-data-mono-sm text-[11px] flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>L5 Sr. Monitor
+                  </span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="bg-error/20 text-error font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-bold uppercase">Escalated</span>
+</td>
+<td class="py-space-8 px-space-12 text-right font-data-mono-sm text-data-mono-sm text-outline">
+                  18m ago
+                </td>
+</tr>
+<!-- Row #EG-10478 -->
+<tr class="bg-surface-container hover:bg-surface-container-highest/40 cursor-pointer transition-colors text-on-surface">
+<td class="py-space-8 px-space-12 font-data-mono-sm text-data-mono-sm text-outline">
+                  #EG-10478
+                </td>
+<td class="py-space-8 px-space-12">
+<div class="flex items-center gap-space-6">
+<span class="material-symbols-outlined text-outline text-[16px]">domain_disabled</span>
+<span>Unauthorized Campaigning</span>
+</div>
+</td>
+<td class="py-space-8 px-space-12 text-on-surface-variant">
+                  Perimeter 100m, PS #14
+                </td>
+<td class="py-space-8 px-space-12">
+<span class="bg-surface-container-highest text-outline font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-semibold uppercase tracking-wider">Low</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="text-on-surface-variant font-data-mono-sm text-[11px]">Unverified Citizen</span>
+</td>
+<td class="py-space-8 px-space-12">
+<span class="bg-surface-container-high text-outline font-data-mono-sm text-[10px] px-space-6 py-space-2 rounded font-bold uppercase">Unverified</span>
+</td>
+<td class="py-space-8 px-space-12 text-right font-data-mono-sm text-data-mono-sm text-outline">
+                  27m ago
+                </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- RIGHT REGION: 35% (4/12 cols) — HUMAN-IN-THE-LOOP VERIFICATION WORKBENCH -->
+<!-- RIGHT WORKBENCH PANEL: Incident Review & Verification -->
+<div class="xl:col-span-4 flex flex-col gap-4">
+  <div class="bg-white rounded-lg border border-slate-200 shadow-xs flex flex-col overflow-hidden">
+    <!-- Header -->
+    <div class="p-4 border-b border-slate-100 flex flex-col gap-2">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-sm font-bold text-slate-900 tracking-tight">INCIDENT #EG-10482</span>
+          <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[11px] font-semibold">High Priority</span>
+        </div>
+        <span class="text-xs text-slate-500 font-medium">4m ago • Sector 4B</span>
+      </div>
+      <h3 class="text-sm font-semibold text-slate-900 leading-snug">Voter Intimidation & Entry Impediment</h3>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Unauthorized individuals reported near Gate 2, requesting unofficial voter identification checks outside the facility.
+      </p>
+    </div>
+
+    <!-- Verified Location & Source Details -->
+    <div class="p-4 flex flex-col gap-2.5 border-b border-slate-100 bg-slate-50/50">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-slate-500">Location:</span>
+        <span class="font-medium text-slate-800">Govt Sr Sec School, Station #142</span>
+      </div>
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-slate-500">Reporting Observer:</span>
+        <span class="font-medium text-slate-800 flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px] text-emerald-600">verified_user</span>
+          Civil Forum (#OBS-402)
+        </span>
+      </div>
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-slate-500">Corroboration:</span>
+        <span class="font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded text-[11px]">3 Citizen Co-Reports</span>
+      </div>
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-slate-500">Status:</span>
+        <span class="font-semibold text-amber-700">Under Review</span>
+      </div>
+    </div>
+
+    <!-- Attached Evidence Snapshot -->
+    <div class="p-4 flex flex-col gap-2 border-b border-slate-100">
+      <span class="text-xs font-semibold text-slate-700">Attached Media & Evidence</span>
+      <div class="flex items-center gap-3 p-2 rounded-md bg-slate-50 border border-slate-200">
+        <div class="w-14 h-14 rounded bg-slate-200 overflow-hidden shrink-0 relative">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFCrq32vB62WrxNk1fVzhk2CgFy3kUuq3SVmFyAmBPHV1CRr1aBlgfRd0jaAuSa4Z8P51doyQSMDJShjXR3_AQR7hVjJCr5VyfOZ-ce_KEud8pxg6UlH-FBHnT3XiTpGSv06w7ttVPtV24tx9-2AIKdRhMp2b8CHqiL1boQWaYbkVvs37jcyRGRlBrvJ-_wtK_QDV3b_1clYABv1lsJI_Lxh9VGnrSe6owPycyrNMJXRPkSCtYW8nF" alt="Evidence photo" />
+        </div>
+        <div class="flex flex-col min-w-0 flex-1">
+          <span class="text-xs font-medium text-slate-900 truncate">Station Perimeter Footage</span>
+          <span class="text-[11px] text-slate-500">GPS & Timestamp verified</span>
+          <span class="text-[11px] text-blue-600 font-medium">1 photo • 1 audio memo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons (Smooth, calming, clear) -->
+    <div class="p-4 flex flex-col gap-2.5 bg-white">
+      <div class="grid grid-cols-2 gap-2">
+        <button onclick="openCertifyModal('EG-10482', 'PS #142, North Ward, Sec 4B', 'Voter Intimidation', 'High')" class="h-9 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md flex items-center justify-center gap-1.5 shadow-xs transition-colors" type="button">
+          <span class="material-symbols-outlined text-[16px]">verified</span>
+          <span>Verify Incident</span>
+        </button>
+        <button onclick="openDispatchModal('EG-10482', 'Govt Sr Sec School #142', 'High')" class="h-9 px-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium rounded-md flex items-center justify-center gap-1.5 shadow-xs transition-colors" type="button">
+          <span class="material-symbols-outlined text-[16px]">local_shipping</span>
+          <span>Dispatch Unit</span>
+        </button>
+      </div>
+      <button onclick="showTacticalToast('Incident #EG-10482 marked as disputed/false alarm.', 'info')" class="w-full h-8 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-md transition-colors" type="button">
+        Dispute / Mark False Alarm
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+</div></main></div>
+<script src="assets/js/telemetry.js"></script>
+<script src="assets/js/modal-certify.js"></script>
+<script src="assets/js/nav.js"></script>
+</body></html>
